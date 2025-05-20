@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 id="ID1"></h1>
+    <h2 class="className"></h2>
+    <h2 class="className"></h2>
+    <h3 name="heading3"></h3>
+
+    <script>
+       let id1 = document.getElementById("ID1");
+       id1.innerHTML = "Hello World!";
+
+       let className = document.getElementsByClassName('className');
+    //    className[0].innerHTML = "Hello class!";
+    //    className[1].innerHTML = "Hello class!";
+      
+       for(let i = 0; i < className.length; i++){
+            className[i].innerHTML = "Hello class!";
+            className[i].style.color = "red";
+       }
+
+       let heading3 = document.getElementsByName('heading3');
+       heading3[0].innerHTML = "Hello name!";
+
+       let tagName = document.getElementsByTagName('h1');
+         tagName[0].innerHTML = "Hello tag!";
+
+       let querySelector = document.querySelector('h1');
+       querySelector.innerHTML = "Hello querySelector!";
+
+        let querySelectorAll = document.querySelectorAll('h2');
+        for(let i = 0; i < querySelectorAll.length; i++){
+            querySelectorAll[i].innerHTML = "Hello querySelectorAll!";
+            querySelectorAll[i].style.color = "blue";
+        }
+
+    </script>
+</body>
+</html>
